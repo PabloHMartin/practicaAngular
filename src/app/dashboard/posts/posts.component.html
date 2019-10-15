@@ -1,0 +1,21 @@
+<mat-toolbar class="top-toolbar">
+    <span *ngIf="!receivedIdFromChild">Posts</span>
+    <span *ngIf="receivedIdFromChild">{{receivedIdFromChild.id}}</span>
+    <span>{{email}}</span>
+</mat-toolbar>
+
+<table  class="table">
+    <tr>
+        <th>Title</th>
+    </tr>
+    <tr *ngFor=" let post of db.getPosts() | async">
+        <td>
+            <app-post (postId)="recieveIdFromChild($event)" [post]="post" >
+               
+            </app-post>
+        </td>
+    </tr>
+</table>
+
+
+<app-footer [activated]="receivedIdFromChild"></app-footer>

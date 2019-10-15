@@ -1,0 +1,12 @@
+.top-toolbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.table{
+    width: 60%;
+    margin: 2em auto;
+    table,tr,td{
+        border: 1px solid grey;
+    }
+}
