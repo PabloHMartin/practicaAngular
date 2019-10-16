@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { DbService } from 'src/app/services/db.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,19 +9,19 @@ import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 export class FooterComponent implements OnInit {
   @Input() activated;
   
-  constructor() { }
+  constructor(public db: DbService) { }
 
   ngOnInit() {    
   }
-  
 
-    ngOnChanges(changes: SimpleChanges) {
-     // console.log(this.activated);
-      
-  }
 
   deletePost(){
-    console.log(this.activated);
+    this.db.deletePostById(this.activated.id);
+    alert(`Post ${this.activated.id} deleted`);
+  }
+
+  addPost(){
+    this.db.addPost();
   }
 
 }

@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
-  ]
+  ],
+  entryComponents: []
 })
 export class DashboardModule { }

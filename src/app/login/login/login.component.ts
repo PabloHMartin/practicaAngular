@@ -42,6 +42,9 @@ export class LoginComponent implements OnInit {
 
       // TODO pasar la info a storage y el router a posts
       localStorage.setItem('email', email);
+      if(email == 'admin@mail.com'){
+        localStorage.setItem('rol', 'admin');
+      }
       localStorage.setItem('password', password);
       localStorage.setItem('isLogged', 'true');
       this.router.navigate(['/dashboard']);

@@ -1,0 +1,19 @@
+<app-header [comentario]="inputId" [total]="totalComentarios"></app-header>
+
+<div class="form">
+    <mat-form-field>
+        <input matInput placeholder="Id" [(ngModel)]="inputId" />
+    </mat-form-field>
+    <div class="spacer"></div>
+    <button mat-raised-button color="primary" (click)="getComentarios()">Comentarios</button>
+</div>
+
+
+
+<div *ngFor=" let comentario of comentarios$ | async" >
+    <mat-card class="comentarios">
+        <p><span class="label">Name: </span>{{comentario.name}}</p>
+        <p><span class="label">Email: </span>{{comentario.email}}</p>
+        <p><span class="label">Body: </span>{{comentario.body}}</p>
+    </mat-card>
+</div>

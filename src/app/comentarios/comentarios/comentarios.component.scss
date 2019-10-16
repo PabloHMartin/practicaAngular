@@ -1,0 +1,16 @@
+.comentarios{
+    margin: 1em 3em;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .spacer{
+        width: 1em;
+    }
+}
+
+.label{
+    font-weight: 500;
+}

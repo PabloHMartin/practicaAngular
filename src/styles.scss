@@ -46,7 +46,7 @@ $md-mcgpalette0: (
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $practicaAngular-primary: mat-palette($md-mcgpalette0);
-$practicaAngular-accent: mat-palette($mat-pink, A200, A100, A400);
+$practicaAngular-accent: mat-palette($md-mcgpalette0, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $practicaAngular-warn: mat-palette($mat-red);
